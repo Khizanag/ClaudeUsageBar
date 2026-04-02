@@ -11,7 +11,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem.button {
-            button.image = loadClaudeIcon()
+            button.image = ClaudeIcon.loadTrayIcon()
             button.imagePosition = .imageLeading
             button.action = #selector(togglePopover)
             button.target = self
@@ -41,26 +41,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         if !title.isEmpty {
             button.title = " \(title)"
         }
-    }
-
-    private func loadClaudeIcon() -> NSImage? {
-        // Use Claude.app's template icon (auto-tints for light/dark menu bar)
-        let claudeAppIcon = "/Applications/Claude.app/Contents/Resources/TrayIconTemplate@2x.png"
-
-        // Fallback: icon bundled next to the executable
-        let executableURL = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent()
-        let bundledIcon = executableURL
-            .deletingLastPathComponent()
-            .deletingLastPathComponent()
-            .appendingPathComponent("Resources/TrayIconTemplate@2x.png")
-            .path
-
-        let path = FileManager.default.fileExists(atPath: claudeAppIcon) ? claudeAppIcon : bundledIcon
-
-        guard let image = NSImage(contentsOfFile: path) else { return nil }
-        image.isTemplate = true
-        image.size = NSSize(width: 18, height: 18)
-        return image
     }
 
     @objc private func togglePopover() {
