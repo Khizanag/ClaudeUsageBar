@@ -100,7 +100,9 @@ actor UsageParser {
                       let usage = message["usage"] as? [String: Any] else { continue }
 
                 let model = (message["model"] as? String) ?? "unknown"
+                guard isRealModel(model) else { continue }
                 let tokens = extractTokens(from: usage)
+                guard tokens.totalTokens > 0 else { continue }
 
                 if dailyMap[dateKey] == nil {
                     dailyMap[dateKey] = DailyUsage(date: dateKey)
@@ -246,7 +248,9 @@ actor UsageParser {
                   let usage = message["usage"] as? [String: Any] else { continue }
 
             let model = (message["model"] as? String) ?? "unknown"
+            guard isRealModel(model) else { continue }
             let tokens = extractTokens(from: usage)
+            guard tokens.totalTokens > 0 else { continue }
 
             session.messageCount += 1
             var existing = session.tokensByModel[model] ?? TokenUsage()
@@ -287,5 +291,9 @@ actor UsageParser {
         }
         formatter.formatOptions = [.withInternetDateTime]
         return formatter.date(from: timestampStr)
+    }
+
+    private func isRealModel(_ model: String) -> Bool {
+        !model.hasPrefix("<") && model != "unknown"
     }
 }
