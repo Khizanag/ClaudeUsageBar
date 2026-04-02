@@ -62,7 +62,9 @@ final class UsageViewModel {
 
     // MARK: - Formatting
     func formatCompact(_ tokens: Int) -> String {
-        if tokens >= 1_000_000 {
+        if tokens >= 1_000_000_000 {
+            String(format: "%.1fB", Double(tokens) / 1_000_000_000)
+        } else if tokens >= 1_000_000 {
             String(format: "%.1fM", Double(tokens) / 1_000_000)
         } else if tokens >= 1_000 {
             String(format: "%.0fK", Double(tokens) / 1_000)
