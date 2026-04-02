@@ -3,43 +3,43 @@ import SwiftUI
 
 enum Claude {
     // MARK: - Backgrounds
-    static let bg000 = Color(adaptive: (light: 0xF8F8F6, dark: 0x1A1918))
-    static let bg100 = Color(adaptive: (light: 0xF5F3EC, dark: 0x242220))
-    static let bg200 = Color(adaptive: (light: 0xEFEBDF, dark: 0x2E2B28))
-    static let bg300 = Color(adaptive: (light: 0xE5E0D1, dark: 0x3A3633))
-    static let bg400 = Color(adaptive: (light: 0xD9D2BE, dark: 0x4A4541))
+    static let bg000 = Color(adaptive: (light: 0xFAF9F5, dark: 0x1A1918))
+    static let bg100 = Color(adaptive: (light: 0xF3F1E8, dark: 0x242220))
+    static let bg200 = Color(adaptive: (light: 0xEBE7DA, dark: 0x2E2B28))
+    static let bg300 = Color(adaptive: (light: 0xE0DBCC, dark: 0x3A3633))
+    static let bg400 = Color(adaptive: (light: 0xD4CEBC, dark: 0x4A4541))
 
     // MARK: - Text
-    static let text000 = Color(adaptive: (light: 0x0F0E0D, dark: 0xF5F3EC))
-    static let text200 = Color(adaptive: (light: 0x3C3229, dark: 0xDBD5C9))
-    static let text300 = Color(adaptive: (light: 0x514C45, dark: 0xB5AFA6))
-    static let text400 = Color(adaptive: (light: 0x655F57, dark: 0x918A82))
-    static let text500 = Color(adaptive: (light: 0x736C63, dark: 0x736C63))
+    static let text000 = Color(adaptive: (light: 0x191918, dark: 0xF3F1E8))
+    static let text200 = Color(adaptive: (light: 0x3D3929, dark: 0xD8D2C4))
+    static let text300 = Color(adaptive: (light: 0x5D5847, dark: 0xB0A998))
+    static let text400 = Color(adaptive: (light: 0x78725F, dark: 0x8E877A))
+    static let text500 = Color(adaptive: (light: 0x9B9484, dark: 0x6E6860))
 
-    // MARK: - Accent (Terracotta)
-    static let accent = Color(adaptive: (light: 0xD97757, dark: 0xE08B6E))
-    static let accentDark = Color(adaptive: (light: 0xAB5535, dark: 0xC96B45))
-    static let accentTint = Color(adaptive: (light: 0xF0D8CE, dark: 0x3D2A22))
+    // MARK: - Accent (Claude Terracotta)
+    static let accent = Color(adaptive: (light: 0xDA7756, dark: 0xE58E71))
+    static let accentHover = Color(adaptive: (light: 0xC4623F, dark: 0xDA7756))
+    static let accentTint = Color(adaptive: (light: 0xFAE8E0, dark: 0x3D2A22))
 
     // MARK: - Secondary (Blue)
-    static let blue = Color(adaptive: (light: 0x2080DE, dark: 0x5AA3E8))
-    static let blueTint = Color(adaptive: (light: 0xD8EAFA, dark: 0x1A2E42))
+    static let blue = Color(adaptive: (light: 0x4A90D9, dark: 0x6BA8E8))
+    static let blueTint = Color(adaptive: (light: 0xE0EEFA, dark: 0x1C2E40))
 
-    // MARK: - Pro (Purple)
-    static let pro = Color(adaptive: (light: 0x5145A1, dark: 0x7B6FCF))
-    static let proTint = Color(adaptive: (light: 0xDED8F0, dark: 0x2A2540))
+    // MARK: - Pro (Purple / Opus)
+    static let pro = Color(adaptive: (light: 0x6B5CE7, dark: 0x8B7EF0))
+    static let proTint = Color(adaptive: (light: 0xEAE6FC, dark: 0x28234A))
 
     // MARK: - Danger
-    static let danger = Color(adaptive: (light: 0xA72418, dark: 0xE04A3C))
-    static let dangerTint = Color(adaptive: (light: 0xEBD5D5, dark: 0x3D1F1C))
+    static let danger = Color(adaptive: (light: 0xC2392A, dark: 0xE04F42))
+    static let dangerTint = Color(adaptive: (light: 0xFCE4E1, dark: 0x3D201C))
 
     // MARK: - Success
-    static let success = Color(adaptive: (light: 0x788C5D, dark: 0x96AD78))
-    static let successTint = Color(adaptive: (light: 0xE2EAD5, dark: 0x263020))
+    static let success = Color(adaptive: (light: 0x5E8C3D, dark: 0x7EAD5E))
+    static let successTint = Color(adaptive: (light: 0xE2EED5, dark: 0x243020))
 
     // MARK: - Warning
-    static let warning = Color(adaptive: (light: 0xCC8800, dark: 0xE0A630))
-    static let warningTint = Color(adaptive: (light: 0xFAECD8, dark: 0x3D3018))
+    static let warning = Color(adaptive: (light: 0xD4920A, dark: 0xE8AD38))
+    static let warningTint = Color(adaptive: (light: 0xFDF0D0, dark: 0x3D3018))
 
     // MARK: - Model Colors
     static let opus = pro
